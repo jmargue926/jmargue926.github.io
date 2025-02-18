@@ -44,9 +44,8 @@ td img{
 /* Nueva página 2, ahora con posicionamiento flotante */
 
 /* Modificar el cuerpo principal de los ODS */
-#ods{
-	margin-left: 5px;
-	margin-right: 5px;
+div#ods{
+	border: 20px solid red;
 }
 
 #ods a{ /* Flotantes y con esquinas redondeandas */
@@ -57,7 +56,7 @@ td img{
 }
 
 #ods img{ /* Dejar todos los ODS al mismo tamaño*/
-	height: 215px;
+	height: 218px;
 }
 
 /* Pagina 3 Principales Retos*/
@@ -165,27 +164,29 @@ section{
 #Mapa img{
 	width: 80%;
 	height: 80%;
+	
 }
 
-/*
-	Retos ambientales y solciales
-		Cambio Climático
-		Superopoblación
-		Consumo de agua
-		Contaminación
-		Deforestación
-		Otros Problemas
-	Impacto de los actuales problemas medioambientales
-		Impacto sobre las personas
-			(Uno de cada de los retos)
-		Impacto sobre los sectores productivos
-		Importancia del trabajo transversal y las alianzas para frenar los impactos de los retos ambientales
-	Medidas y acciones para minimizar los impactos ambientales
-		Eficiencia energética
-		Gesitión de Residuos
-		Conservación de los recursos naturales
-		Control de la Contaminación
-		Movilidad Sostenible
-		Innovación tecnológica
-		Educación y sensibilización
-*/
+footer{
+	text-align: center;
+	border: solid lightgray 2px;
+	background: white;
+}
+
+#Footer1{
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+#Footer2{
+	float: left;
+	margin-left: 15%;
+	width: 70%;
+}
+#Footer3{
+	position: absolute;
+	top: 300%;
+	left: 20%;
+	right: 20%;
+	height: 5%;
+}
