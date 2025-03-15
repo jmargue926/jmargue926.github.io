@@ -1,0 +1,15 @@
+/* Nueva página 2, ahora con posicionamiento flotante */
+#ods a{ /* Flotantes y con esquinas redondeandas */
+    float: left;
+	margin: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#ods img{ /* Dejar todos los ODS al mismo tamaño*/
+	height: 290px;
+}
+
+footer{
+	float: left;
+}

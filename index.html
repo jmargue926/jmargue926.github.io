@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="autor" content="Juan Carlos Martinez Guerrero">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="estilos/plantilla.css">
+	<link rel="stylesheet" type="text/css" href="estilos/index.css">
 	<title>Tabla ODS</title>
 </head>
 <body>
@@ -14,12 +15,27 @@
 		</a></th>
 
 		<tr> <td colspan="6">
-			<nav class="menuPaginas"> <ul>
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="Pagina2.html">Pagina 2</a></li>
-				<li><a href="PrincipalesRetos.html">Principales Retos</a></li>
-				<li><a href="#">...</a></li>
-			</ul> </nav>
+			<nav> <!-- Barra de Navegacion horazontal con Submenus -->
+				<div class="enlaceMenu"> <a href="index.html"> Inicio </a> </div>
+				<div class="enlaceMenu"> <a href="Pagina2.html"> Pagina 2 </a> </div>
+				<div class="enlaceMenu">
+					<a href="PrincipalesRetos.html"> Principales Retos </a>
+					<div class="submenu">
+						<a href="PrincipalesRetos.html#p3-lista">Lista de Retos</a>
+						<a href="PrincipalesRetos.html#Video">Video Informativo</a>
+						<a href="PrincipalesRetos.html#Mapa">Mapa Conceptual</a>
+					</div>
+				</div>
+				<div class="enlaceMenu">
+					<a href="SectoresProductivos.html"> Sectores productivos </a>
+					<div class="submenu">
+						<a href="SectoresProductivos.html#sp1">Sector Primario</a>
+						<a href="SectoresProductivos.html#sp2">Sector Secundario</a>
+						<a href="SectoresProductivos.html#sp3">Sector Terciario</a>
+						<a href="SectoresProductivos.html#sp4">Sector Cuaternario</a>
+					</div>
+				</div>
+			</nav>
 		</td></tr>
 
 		<tr>

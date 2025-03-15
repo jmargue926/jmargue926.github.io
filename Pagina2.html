@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="autor" content="Juan Carlos Martinez Guerrero">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="estilos/plantilla.css">
+	<link rel="stylesheet" type="text/css" href="estilos/pag2.css">
 	<title>Tabla ODS</title>
 </head>
 <body>
@@ -12,14 +13,29 @@
 		<a href="https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/" target="_blank">	<img style="height: 150px;" src="img/ODSbann.jpg"></a>
 	</header>
 
-	<nav class="menuPaginas"> <ul>
-		<li><a href="index.html">Inicio</a></li>
-		<li><a href="Pagina2.html">Pagina 2</a></li>
-		<li><a href="PrincipalesRetos.html">Principales Retos</a></li>
-		<li><a href="#">...</a></li>
-	</ul> </nav>
+	<nav> <!-- Barra de Navegacion horazontal con Submenus -->
+		<div class="enlaceMenu"> <a href="index.html"> Inicio </a> </div>
+		<div class="enlaceMenu"> <a href="Pagina2.html"> Pagina 2 </a> </div>
+		<div class="enlaceMenu">
+			<a href="PrincipalesRetos.html"> Principales Retos </a>
+			<div class="submenu">
+				<a href="PrincipalesRetos.html#p3-lista">Lista de Retos</a>
+				<a href="PrincipalesRetos.html#Video">Video Informativo</a>
+				<a href="PrincipalesRetos.html#Mapa">Mapa Conceptual</a>
+			</div>
+		</div>
+		<div class="enlaceMenu">
+			<a href="SectoresProductivos.html"> Sectores productivos </a>
+			<div class="submenu">
+				<a href="SectoresProductivos.html#sp1">Sector Primario</a>
+				<a href="SectoresProductivos.html#sp2">Sector Secundario</a>
+				<a href="SectoresProductivos.html#sp3">Sector Terciario</a>
+				<a href="SectoresProductivos.html#sp4">Sector Cuaternario</a>
+			</div>
+		</div>
+	</nav>
 
-	<div id="ods">
+	<div id="ods"> <!-- Lista de ODS -->
 		<a href="https://www.un.org/sustainabledevelopment/es/poverty/" target="_blank"><img src="img/S_SDG_Icons-01-01.jpg" title="ODS 1" alt="ODS 1">	</a>
 		<a href="https://www.un.org/sustainabledevelopment/es/hunger/" target="_blank">	<img src="img/S_SDG_Icons-01-02.jpg" title="ODS 2" alt="ODS 2"> </a>
 		<a href="https://www.un.org/sustainabledevelopment/es/health/" target="_blank">	<img src="img/S_SDG_Icons-01-03.jpg" title="ODS 3" alt="ODS 3">	</a>
@@ -40,7 +56,7 @@
 		<a href="https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/" target="_blank">	<img src="img/S_SDG_Icons-01-18.jpg" title="WEB ODS" alt="WEB ODS">	</a>
 	</div>
 
-	<footer id="Footer2">
+	<footer>
 		<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://jmargue926.github.io/">ODS Sostenibilidad</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/jmargue926">Juan Carlos Martinez Guerrero</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p> 
 	</footer>
 </body>

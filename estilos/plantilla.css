@@ -1,0 +1,64 @@
+body{
+	margin: 0;
+}
+
+/* Cabecera */
+header{
+	text-align: center;
+}
+header img{
+	max-width: 100%; 
+	max-height: 100%; 
+}
+
+/* Menu renovado con divs */
+nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background: #30A6E6;
+	margin-bottom: 10px;
+}
+
+.enlaceMenu{
+	margin: 0px 5px;
+}
+.enlaceMenu a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	border-radius: 7px;
+	font: bold 20px/30px sans-serif;
+	background-color: rgb(9, 115, 244);
+	padding: 10px;
+}
+.enlaceMenu:hover a{
+	background-color: rebeccapurple;
+}
+
+/* Submenús */
+.submenu{
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	min-width: 187px;
+	z-index: 2;
+}
+.enlaceMenu:hover .submenu {
+	visibility: visible;
+	display: block;
+}
+.submenu a:hover{
+	background-color: orange;
+}
+/* Fin del menú */
+
+/* Footer Común a todas las páginas */
+footer{
+	text-align: center;
+	background: rgb(201, 201, 201);
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

@@ -1,0 +1,10 @@
+/* Estilo de la página inicial, la de las tablas */
+table{
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+td img{
+	height: 290px;
+	border-radius: 6px;
+}
