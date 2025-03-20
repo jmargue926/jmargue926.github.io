@@ -1,4 +1,8 @@
 /* Pagina 3 Principales Retos*/
+body{
+	margin: 0;
+}
+
 h1{
 	text-align: center;
 	color: rgb(9, 115, 244);
@@ -7,9 +11,9 @@ h1{
 #retorno{
 	position: fixed;
 	text-align: center;
-	left: 2%;
-	top: 30%;
-	width: 5%;
+	left: 10px;
+	top: 300px;
+	width: 100px;
 	padding-bottom: 10px;
 	border: 1px solid lightgray;
 	border-radius: 8px;
@@ -23,108 +27,106 @@ h1{
 
 /* Parte principal de la página */
 main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: 100%;
-	margin-left: 10px;
-	display: block;
 }
-main article{
-	position: absolute;
-	text-align: center;
-	width: 35%;
-	height: 32%;
-	padding: 0% 1% 1% 1%;
+
+#retos{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+article{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 	border: solid lightgray 2px;
-	overflow: hidden;
-	background: white;
-	z-index: 1;
+	border-radius: 10px;
 }
 
-main img{
-	max-height: 250px;
-	max-width: 500px;
+#retos article{
+	width: 700px;
+	text-align: center;
+	margin: 0 20px 30px 20px;
 }
 
-/* Cambiar el tamaño de letra de los retos */
-#main p{
+.imagen{
+	width: 600px;
+}
+.imagen img{
+	width: 100%;
+}
+
+/* Ajustar el texto */
+p{
 	font-size: 20px;
+	padding: 5px;
 }
-
-/* Posicionar correctamente cada reto */
-#Reto1{
-	top: 30%;
-	left: 10%;
-}
-#Reto2{
-	top: 30%;
-	right: 10%;
-}
-#Reto3{
-	top: 70%;
-	left: 10%;
-}
-#Reto4{
-	top: 70%;
-	right: 10%;
-}
-#Reto5{
-	top: 110%;
-	left: 10%;
-}
-#Reto6{
-	top: 110%;
-	right: 10%;
-}
-#Reto6 ul{
+ul{
 	list-style: square;
 	font-size: 20px;
 	text-align: left;
 }
 
-/* Hacer grande el reto cuando se pone el ratón encima*/
-article:hover{
-	z-index: 2;
-	width: 50%;
-	height: auto;
+/* Los 2 articulos finales */
+#otros{
+	width: 75%;
 }
-article:hover img{
-	height: auto;
-	width: 100%;
+#otros article{
+	margin-bottom: 30px;
 }
 
-/* Video después de los artículos de los retos */
-section{
-	position: absolute;
-	text-align: center;
-	border: solid lightgray 2px;
-	background: white;
+#video{
+	height: 700px;
 }
-#Video{
-	top: 150%;
-	left: 15%;
-	right: 15%;
-	height: 80%;
-}
-#Video iframe{
+iframe{
 	height: 85%;
-	width: 80%;
+	width: 85%;
 }
 
-/* Mapa conceptal después */
-#Mapa{
-	top: 235%;
-	left: 15%;
-	right: 15%;
-	height: 95%;
+#mapa{
+	height: 960px;
 }
-#Mapa img{
-	max-height: none;
-	max-width: none;
+#otros img{
 	width: 80%;
-	height: auto;
+	margin-bottom: 30px;
 }
 
-footer{
-	position: absolute;
-	top: 335%;
-	left: 0;
+
+/* Para que adepte mejor a otras pantallas */
+@media screen and (width < 1700px) {
+	#retos{ 
+		flex-direction: column;
+		align-items: center;
+	}
+	#retos article{	width: 80% }
+	.imagen{ width: 80%; }
+
+	#otros article{
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16 / 9;
+		/* Necesito usar esto para que el iframe del video no se descuadre */
+	}
 }
+
+@media screen and (width < 1180px) {
+	#retorno{ visibility: hidden; }
+}
+
+
+
+
+
+
+
+
+
+

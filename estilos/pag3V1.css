@@ -1,0 +1,130 @@
+/* Pagina 3 Principales Retos*/
+h1{
+	text-align: center;
+	color: rgb(9, 115, 244);
+}
+
+#retorno{
+	position: fixed;
+	text-align: center;
+	left: 2%;
+	top: 30%;
+	width: 5%;
+	padding-bottom: 10px;
+	border: 1px solid lightgray;
+	border-radius: 8px;
+}
+#retorno img{
+	width: 50px;
+}
+#retorno a{
+	font-size: larger;
+}
+
+/* Parte principal de la página */
+main{
+	width: 100%;
+	margin-left: 10px;
+	display: block;
+}
+main article{
+	position: absolute;
+	text-align: center;
+	width: 35%;
+	height: 32%;
+	padding: 0% 1% 1% 1%;
+	border: solid lightgray 2px;
+	overflow: hidden;
+	background: white;
+	z-index: 1;
+}
+
+main img{
+	max-height: 250px;
+	max-width: 500px;
+}
+
+/* Cambiar el tamaño de letra de los retos */
+#main p{
+	font-size: 20px;
+}
+
+/* Posicionar correctamente cada reto */
+#Reto1{
+	top: 30%;
+	left: 10%;
+}
+#Reto2{
+	top: 30%;
+	right: 10%;
+}
+#Reto3{
+	top: 70%;
+	left: 10%;
+}
+#Reto4{
+	top: 70%;
+	right: 10%;
+}
+#Reto5{
+	top: 110%;
+	left: 10%;
+}
+#Reto6{
+	top: 110%;
+	right: 10%;
+}
+#Reto6 ul{
+	list-style: square;
+	font-size: 20px;
+	text-align: left;
+}
+
+/* Hacer grande el reto cuando se pone el ratón encima*/
+article:hover{
+	z-index: 2;
+	width: 50%;
+	height: auto;
+}
+article:hover img{
+	height: auto;
+	width: 100%;
+}
+
+/* Video después de los artículos de los retos */
+section{
+	position: absolute;
+	text-align: center;
+	border: solid lightgray 2px;
+	background: white;
+}
+#Video{
+	top: 150%;
+	left: 15%;
+	right: 15%;
+	height: 80%;
+}
+#Video iframe{
+	height: 85%;
+	width: 80%;
+}
+
+/* Mapa conceptal después */
+#Mapa{
+	top: 235%;
+	left: 15%;
+	right: 15%;
+	height: 95%;
+}
+#Mapa img{
+	max-height: none;
+	max-width: none;
+	width: 80%;
+	height: auto;
+}
+
+footer{
+	position: absolute;
+	top: 335%;
+	left: 0;
+}
