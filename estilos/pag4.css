@@ -1,9 +1,9 @@
 #retorno{
 	position: fixed;
 	text-align: center;
-	left: 2%;
+	left: 10px;
 	top: 30%;
-	width: 5%;
+	width: 80px;
 	padding-bottom: 10px;
 	border: 1px solid lightgray;
 	border-radius: 8px;
@@ -19,8 +19,8 @@
 main{
 	display: flex;
 	flex-direction: column;
-	margin-left: 9%;
-	margin-right: 2%;
+	margin-left: 100px;
+	margin-right: 30px;
 	margin-bottom: 20px;
 }
 
@@ -32,10 +32,9 @@ article{
 	padding-left: 20px;
 
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
-}
-article div{
-	width: 65%;
+	align-items: center;
 }
 
 article p, article li{
@@ -46,15 +45,22 @@ article ul{
 }
 
 aside{
-	width: 30%;
 	margin: 10px 50px 10px 30px;
 	display: flex;
 	align-items: center;
 }
 
 aside img{
-	width: 100%;	
+	width: 400px;
 }
-/*
-* {border: 1px solid;}
-*/
+
+
+@media screen and (width < 1200px) {
+	main{ margin-left: 30px; }
+	#retorno{ visibility: hidden; }
+	article{flex-direction: column; }
+	.imagen img{
+		margin-left: auto;
+		margin-bottom: 20px;
+	}
+}
