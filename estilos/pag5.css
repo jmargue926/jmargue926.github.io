@@ -1,0 +1,195 @@
+h1, h2, h3{
+	text-align: center;
+	color: rgb(0, 78, 0);
+}
+
+main{
+	display: grid;
+	justify-items: center;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+	"a41  a412 a412 a42 "
+	"a421 a422 a43  a43 "
+	"a44  a441 a45  a451"	;
+}
+
+article{
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	margin: 10px;
+	padding: 0px 15px 10px;
+	justify-self: center;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Asignar a cada id su posición en el GRID */
+#a41{  grid-area: a41 ; }
+#a412{ grid-area: a412; }
+#a42{  grid-area: a42 ; }
+#a421{ grid-area: a421; }
+#a43{  grid-area: a43 ; }
+#a44{  grid-area: a44 ; }
+#a441{ grid-area: a441; }
+#a45{  grid-area: a45 ; }
+#a451{ grid-area: a451; }
+
+/* Decoraciñon de cosas que se reutilizan por la página */
+article p, article li, table{
+	font-size: larger;
+}
+
+.imagen img{
+	width: 100%;
+}
+
+.video{
+	width: 100%;
+}
+iframe{  /* Asegurarme de que el vídeo se posiciona en condiciones */
+    aspect-ratio: 16 / 9;
+	height: auto;
+	width: 100%;
+}
+
+/* Decoración de las tablas y listas, colores alternantes */
+table{
+	border-collapse: collapse;
+}
+th{
+	background-color: rgb(3, 155, 3);
+}
+tr:nth-child(odd), li:nth-child(odd){
+	background-color: rgb(190, 252, 166);
+}
+tr:nth-child(even), li:nth-child(even){
+	background-color: rgb(232, 255, 223);
+}
+
+/* Decoración de las tablas y listas, un poco de padding */
+td, li{
+	padding: 3px 6px;
+}
+
+/* La subdivisión del apartado 412 la hago con flex ya que son solo 2 elementos */
+#a412 .subdivision{
+	display: flex;
+	justify-content: space-evenly;
+	padding-bottom: 20px;
+}
+#a412 section{
+	width: 45%;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	padding: 0px 10px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* La imagen del 421 es más pequeña que el resto */
+#a421 .imagen{
+	width: 80%;
+}
+
+/* La sección del consumismo la vuelvo a dividor con GRID */
+#cosasConsumismo{
+	display: grid;
+	grid-template-columns: 50% 50% ;
+	justify-items: center;
+}
+
+/* Decoraciñon de las secciones del consumismo */
+#cosasConsumismo section{
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	width: 90%;
+	margin-bottom: 15px;
+	padding: 0px 15px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h3{
+	margin: 10px 0px 0px;
+}
+#glob{
+	text-align: center;
+}
+
+/* Decorar el PDF */
+#pdf{
+	justify-content: center;
+	align-items: center;
+}
+#pdf a{
+	background-color: rgb(103, 252, 148);
+	padding: 20px 30px;
+	margin: 20px;
+	font-size: x-large;
+	text-decoration: none;
+	color: black;
+	border-radius: 12px;
+
+}
+
+/* Media queries para cuando cambia la pantalla */
+@media screen and (width < 1300px) {
+	/* Ajustar el main */
+	main {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+		"a41  a412 a412"
+		"a42  a421 a422"
+		"a43  a43  a44 "
+		"a441 a45  a451" ;
+	}
+}
+
+@media screen and (width < 1000px) {
+	main {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+		"a41  a412"
+		"a42  a412"
+		"a421 a422"
+		"a43  a43 "
+		"a44  a441"
+		"a45  a451"	;
+	}
+
+	/* ajustar la subdivisión del 412 */
+	#a412 .subdivision{
+		flex-direction: column;
+		padding-bottom: 0px;
+	}
+	#a412 section{
+		width: 95%;
+		margin-bottom: 10px ;
+	}
+}
+
+@media screen and (width < 700px){
+	main{
+		grid-template-columns: 100%;
+		grid-template-areas: "a41" "a412" "a42" "a421" "a422" "a43" "a44" "a441" "a45" "a451";
+	}
+	#cosasConsumismo{
+		grid-template-columns: 100% ;
+	}	
+}
+
+/* Animaciones extra para que quede más bonito */
+article, section{
+	transition: 0.3s linear;
+}
+article:hover, section:hover{
+	transform: scale(1.01);
+}
